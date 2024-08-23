@@ -224,7 +224,7 @@ input:checked + .slider:before {
         width: 200px;
     }
     .game > h1{
-        font-size: 30px;
+        font-size: 50px;
     }
 
 }
