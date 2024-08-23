@@ -1,0 +1,215 @@
+:root {
+  --handCardsWidth: 200px;
+}
+
+.content {
+  position: relative;
+}
+
+.handCards {
+  width: var(--handCardsWidth);
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: 200px;
+  gap: 10px;
+}
+
+.resultDiv {
+  /* display: none; */
+}
+
+.handCards > div img {
+  cursor: pointer;
+  scale: 0.7;
+  transition: all ease-in-out 0.3s;
+}
+
+.handCards > div img:hover {
+  scale: 1.1;
+}
+
+.handCards > div {
+  border: 4px dotted white;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cricleBox > p {
+  margin-top: 20px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.cricleBox {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - var(--handCardsWidth));
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  z-index: 9;
+  background-image: conic-gradient(#02abc9 100%, #e0e0e0 0%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  background: rgb(21, 21, 90);
+  border-radius: 50%;
+}
+
+.time {
+  font-family: "Poppins", serif;
+  font-size: 10em;
+  font-weight: 600;
+  color: white;
+  z-index: 9;
+  animation: timeSplash ease-in-out 1s infinite;
+}
+
+/* result div */
+
+.resultBox {
+  position: absolute;
+  top: 40%;
+  left: 38%;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.resultBox p {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+.resultDiv {
+  width: calc(100% - var(--handCardsWidth));
+}
+
+.finalResult {
+  width: 100%;
+  text-align: center;
+}
+
+.finalResult > p {
+  font-family: "Kurale", sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  font-size: clamp(3rem, 7.385vw + 1.385rem, 6rem);
+  line-height: clamp(4.5rem, 8.123vw + 2.723rem, 7.8rem);
+}
+
+.retryDiv {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 50px;
+  right: 0;
+  width: calc(100% - var(--handCardsWidth));
+}
+
+.retryDiv > img {
+  transition: all ease-out 0.5s;
+  cursor: pointer;
+}
+
+.retryDiv > img:hover {
+  scale: 1.4;
+}
+
+.gameIcon {
+  animation: handAnimation 1s ease-in-out infinite;
+}
+
+@keyframes handAnimation {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: translate(-15deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .handCards {
+    position: absolute;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 100px;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 550px;
+    z-index: 2;
+  }
+
+  .cricleBox {
+    width: 100%;
+  }
+
+  .handCards > div img {
+    scale: 0.3;
+  }
+
+  .resultDiv {
+    width: 100%;
+  }
+
+  .resultBox {
+    left: 0;
+    padding-inline: 50px;
+    width: 100%;
+    top: 200px;
+  }
+
+  .resultBox img {
+    scale: 0.7;
+  }
+
+  .retryDiv img {
+    scale: 1.1;
+  }
+
+  .retryDiv {
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+  }
+}
+
+.dNone {
+  display: none;
+}

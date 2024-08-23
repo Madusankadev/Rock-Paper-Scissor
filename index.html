@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Rock-Paper-Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="settingIcon">
+        <img src="./resources/guide-book.png" id="settingsIcon" alt="" />
+      </div>
+      <div class="game">
+        <img src="./resources/rps-img.png" alt="">
+        <h1><span style="color: #ed3493">Rock</span>
+            <span style="color: #f9c900">Paper</span>
+            <span style="color: #00cae5">Scissors</span></h1>
+        <button><a href="./game.html">Let's Play!</a></button>
+    </div>
+    </div>
+
+    <!-- popup -->
+    <div id="popup" class="popup">
+        <div class="popupContent">
+          <img
+            class="closeIcon"
+            id="closePopup"
+            src="./resources/closeIcon.png"
+            width="30px"
+            alt=""
+          />
+          <h2>Settings</h2>
+          <hr />
+          <p style="margin-bottom: 10px;">Customize your game settings here.</p>
+          <div class="soundSettings">
+            <div class="sound">
+              <div class="soundIcon" style="margin-right: 20px">
+                <img src="./resources/soundIcon.png" width="40px" alt="" />
+              </div>
+              <div>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+  
+            <div class="music">
+              <div class="musicIcon" style="margin-right: 20px">
+                <img src="./resources/musicIcon.png" width="40px" alt="" />
+              </div>
+              <div>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <hr />
+          <div class="handImg">
+            <h2 style="margin-top: 0px">Rules for game</h2>
+            <div class="wraps">
+              <div>
+                <img
+                  style="transform: rotate(90deg)"
+                  src="./resources/paper.svg"
+                  width="30px"
+                  alt=""
+                />
+              </div>
+              <p>Wraps</p>
+              <div>
+                <img
+                  style="transform: rotate(270deg)"
+                  src="./resources/rock.svg"
+                  width="30px"
+                  alt=""
+                />
+              </div>
+            </div>
+  
+            <div class="cut">
+              <div>
+                <img
+                  style="transform: rotate(90deg)"
+                  src="./resources/scissors.svg"
+                  width="30px"
+                  alt=""
+                />
+              </div>
+              <p>Cut</p>
+              <div>
+                <img
+                  style="transform: rotate(270deg)"
+                  src="./resources/paper.svg"
+                  width="30px"
+                  alt=""
+                />
+              </div>
+            </div>
+  
+            <div class="blunts">
+              <div>
+                <img
+                  style="transform: rotate(90deg)"
+                  src="./resources/rock.svg"
+                  width="30px"
+                  alt=""
+                />
+              </div>
+              <p>Blunts</p>
+              <div>
+                <img
+                  style="transform: rotate(270deg)"
+                  src="./resources/scissors.svg"
+                  width="30px"
+                  alt=""
+                />
+              </div>
+            </div>
+  
+            <div class="guidlines">
+              <p>
+              Three options of rock paper scissor are given for the
+              initial <br> selection. You have to choose one selection in the given
+              time <br> frame. The final result is given considering your choice and <br>
+              the choice given by the PC. Rock wins against scissors, paper <br> wins
+              against rock, and scissors wins against paper. <br> When your selection
+              and PC's selection are same, the result will <br> be draw.
+            </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+      <script src="./script.js"></script>
+  </body>
+</html>

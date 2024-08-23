@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./game.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container content">
+
+      <div class="handCards" id="chooseOptionBox">
+        <div><img src="./rock.svg" width="auto"  alt="" id="rock"/></div>
+        <div><img src="./paper.svg" width="auto" alt="" id="paper"/></div>
+        <div><img src="./scissors.svg" width="auto" alt="" id="scissors"/></div>
+      </div>
+
+
+      <!-- display none -->
+      <div class="cricleBox " id="cricleBox">
+        <div class="box" id="box"><span class="time" id="time">5</span></div>        
+        <p>Please select your selector before time stop.</p>
+      </div>
+
+      <div class="resultDiv" id="resultDiv">
+        <div class="finalResult">
+          <p id="result">YOU LOSE</p>
+        </div>
+  
+        <div class="resultBox " id="resultBox">
+          <div>
+            <div class="imgBox">
+              <img src="./rock.svg" height="200px" class="gameIcon" alt="" id="userGameIcon">
+            </div>
+            <p>Your Select</p>
+          </div>
+          <div>
+            <div class="imgBox">
+              <img src="./scissors.svg" height="200px" class="gameIcon" alt="" id="gameIcon">
+            </div>
+            <p>PC Select</p>
+          </div>
+        </div>
+  
+        <div class="retryDiv">
+          <img src="./resources/retry.svg" alt="" onclick="gameRestart()">
+        </div>
+      </div>
+
+      
+
+
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
